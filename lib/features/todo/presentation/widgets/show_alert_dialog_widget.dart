@@ -6,10 +6,14 @@ class ShowAlertDialogWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final titleController = TextEditingController();
     return AlertDialog(
       backgroundColor: Color(0xFF8687E7),
       title: Text('Add Todo'),
-      content: Column(mainAxisSize: MainAxisSize.min, children: [WTextField()]),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [WTextField(controller: titleController)],
+      ),
       actions: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
